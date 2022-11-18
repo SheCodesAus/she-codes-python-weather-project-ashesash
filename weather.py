@@ -132,9 +132,7 @@ def find_max(weather_data):
 
 def generate_summary(weather_data):
     num_days = len(weather_data)
-    date_list = [value[0] for value in weather_data]
-    min_list = [value[1] for value in weather_data]
-    max_list = [value[2] for value in weather_data]
+    date_list, min_list, max_list = zip(*weather_data)
     min_val, min_index = find_min(min_list)
     max_val, max_index = find_max(max_list)
     min_temp = format_temperature(convert_f_to_c(min_val))
