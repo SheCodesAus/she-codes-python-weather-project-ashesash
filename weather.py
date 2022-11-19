@@ -80,9 +80,6 @@ def load_data_from_csv(csv_file):
 
 
 def find_min(weather_data):
-    # min_number = min(data)
-    # index = data.index(min_number)
-    # return min_number, index
     data = list(map(float, weather_data))
     if weather_data:
         min_number = None
