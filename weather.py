@@ -87,12 +87,12 @@ def find_min(weather_data):
     data = list(map(float, weather_data))
     if weather_data:
         min_number = None
+        counter = 0
         for i in data:
             if min_number is None or i < min_number:
                 min_number = i
-        for j in range(len(data)):
-            if data[j] == min_number:
-                index = j
+                index = counter
+            counter += 1 # increments with each for-loop
         return min_number, index            
     else:
         return()
